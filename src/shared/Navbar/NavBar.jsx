@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import logo from "../../assets/logo/logo.png"
 
 const NavBar = () => {
     const NaveItems = (
@@ -11,7 +12,7 @@ const NavBar = () => {
     )
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-[#090833] shadow-sm text-white py-4">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,15 +24,31 @@ const NavBar = () => {
                             {NaveItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl">
+                        <img className='w-20 h-16' src={logo} alt="" />
+                    </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-2.5">
                         {NaveItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end text-black">
+                    <label className="input">
+                        <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g
+                                strokeLinejoin="round"
+                                strokeLinecap="round"
+                                strokeWidth="2.5"
+                                fill="none"
+                                stroke="currentColor"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input type="search" required placeholder="Search" />
+                    </label>
                 </div>
             </div>
         </div>

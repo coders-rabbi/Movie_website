@@ -4,9 +4,9 @@ import { Link } from 'react-router';
 
 const Footer = () => {
     return (
-        <div className='flex justify-between items-center px-2'>
+        <div className='flex justify-between items-center px-2 bg-[#330808] text-white py-4 border-2 border-gray-500'>
             <h3>Copyright © 2023 - All right reserved</h3>
-            <div>
+            <div className='flex gap-3'>
                 <Link>About us</Link>
                 <Link>Privacy policy</Link>
             </div>
